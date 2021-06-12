@@ -73,6 +73,34 @@
           }
         }
       }
+    },
+    "/users": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint para adicionar um usuário.",
+        "parameters": [
+          {
+            "name": "newUser",
+            "in": "body",
+            "description": "Informações do usuário.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/AddUser"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Usuário registrado com sucesso!"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
     }
   },
   "definitions": {
