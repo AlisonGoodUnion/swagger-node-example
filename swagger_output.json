@@ -42,22 +42,32 @@
   "paths": {
     "/users/{id}": {
       "get": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint para obter um usuário.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "ID do usuário."
           },
           {
             "name": "filtro",
             "in": "query",
-            "type": "string"
+            "type": "string",
+            "description": "Um filtro qualquer."
           }
         ],
         "responses": {
+          "200": {
+            "description": "Usuário encontrado.",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
           "404": {
             "description": "Not Found"
           }

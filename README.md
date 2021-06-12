@@ -36,8 +36,15 @@ temos que adicionar no `package.json` os `scripts` e dependência o `"swagger-au
 }
 ```
 
-* Exetucar comandos: 
-  `npm install`
+* Exetucar comandos: <br> 
+  `npm install` <br>
   `sudo npm run swagger-autogen`<br>
     Após execução do comando, sera gerado o arquivo `swagger_output.json`
   
+
+* A forma de se comunicar com o módulo swagger-autogen é através da tag <br>
+  “#swagger” dentro de comentários (podendo ser do tipo // ou /* … */)
+  e devem estar dentro de uma função.
+
+Fonte: https://www.npmjs.com/package/swagger-autogen <br>
+Exemplos: https://www.npmjs.com/package/swagger-autogen <br>
